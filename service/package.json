@@ -1,0 +1,28 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx index.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.8",
+    "@types/react": "18.2.22",
+    "@types/react-dom": "^18.2.18",
+    "prop-types": "^15.8.1",
+    "tsx": "^4.9.3"
+  },
+  "dependencies": {
+    "ui": "1.0.0",
+    "@react-pdf/renderer": "^3.4.2",
+    "express": "^4.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-pdf-html": "^1.1.18",
+    "resolve-accept-language": "^2.2.0"
+  },
+  "resolutions": {
+    "@types/react": "18.2.22"
+  }
+}

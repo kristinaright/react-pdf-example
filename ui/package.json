@@ -1,0 +1,14 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "scripts": {
+  },
+  "devDependencies": {
+    "@react-pdf/types": "^2.5.0"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^3.4.2",
+    "react-pdf-html": "^1.1.19"
+  }
+}
