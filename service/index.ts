@@ -8,6 +8,22 @@ const port = Number(process.env.PORT || 3000);
 
 app.use(express.json());
 
+app.use((req, res, next) => {
+  if(req.url !== "/json/version" && req.url !== "/json/list") {
+
+  const toMB = (bytes: number) => (bytes / 1024 / 1024).toFixed(2);
+  const memoryUsage = process.memoryUsage();
+  console.log(
+    `Memory Usage - RSS: ${toMB(memoryUsage.rss)}Mb, Heap Total: ${toMB(
+      memoryUsage.heapTotal,
+    )}Mb, Heap Used: ${toMB(memoryUsage.heapUsed)}Mb, External: ${
+      memoryUsage.external
+    }, ArrayBuffers: ${memoryUsage.arrayBuffers}`,
+  );
+  }
+  next();
+});
+
 app.get(
   `/documents/basic`,
   async (req: Request, res: Response, next: NextFunction) => {
